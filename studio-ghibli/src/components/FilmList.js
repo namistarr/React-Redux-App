@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { getFilms } from '../actions';
 import Loader from 'react-loader-spinner';
 
+import Film from './Film';
+
 const FilmList = props => {
     return (
         <div className='film-container'>
@@ -13,8 +15,9 @@ const FilmList = props => {
                 ) : (
                     'See Studio Ghibli Films'
                 )}
-
             </button>
+            {props.films && 
+                props.films.map(film => <Film key={film.title} film={film} />)}
         </div>
     );
 };

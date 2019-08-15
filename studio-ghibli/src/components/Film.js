@@ -8,3 +8,5 @@ const Film = props => {
         </div>
     )
 }
+
+export default Film;

@@ -17,7 +17,7 @@ export const getFilms = () => {
         })
         .catch(error => {
             console.log('There was an error in axios call', error);
-            dispatch({ type: FETCH_FILMS_FAILURE, payload: error.resonse.status })
+            dispatch({ type: FETCH_FILMS_FAILURE, payload: error.resonse })
         })
     }
 }

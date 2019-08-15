@@ -16,16 +16,28 @@ function reducer(state = initialState, action) {
     switch(action.type) {
         case FETCH_FILMS_START:
             console.log(action.type);
-            return state
-           
+            return{
+                ...state,
+                isLoading: true,
+                error: ''
+            }           
 
         case FETCH_FILMS_SUCCESS:
             console.log(action.type, action.payload);
-            return state
+            return {
+                ...state,
+                isLoading: false,
+                films: action.payload,
+                error: ''
+            }
 
         case FETCH_FILMS_FAILURE: 
             console.log(action.type, action.payload);
-            return state;
+            return {
+              ...state,
+              isLoading: false,
+              error: action.payload
+            }
 
         default:
         return state;
