@@ -6,7 +6,7 @@ export const FETCH_FILMS_SUCCESS = 'FETCH_FILMS_SUCCESS';
 export const FETCH_FILMS_FAILURE = 'FETCH_FILMS_FAILURE';    
 
 
-export const getData = () => {
+export const getFilms = () => {
     return dispatch => {
         dispatch({ type: FETCH_FILMS_START });
         axios
