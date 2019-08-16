@@ -15,12 +15,16 @@ font-size: 1rem;
 width: 100px;
 `
 
+const PageTitle = styled.h1`
+color: #FFFFFF;
+`
+
 
 
 const FilmList = props => {
     return (
         <div className='film-container'>
-            <h1>Studio Ghibli</h1>
+            <PageTitle>Studio Ghibli</PageTitle>
             <Button className ='film-button' onClick={props.getFilms}>
                 {props.isLoading ? (
                     <Loader type='Oval' color='#FFFFFF' height={15} width={100} />

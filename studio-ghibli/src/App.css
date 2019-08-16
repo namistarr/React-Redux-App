@@ -1,10 +1,16 @@
 .App {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
 body {
-  background-image: linear-gradient(to right, pink, orange);
-  color: white;
+  /* background-image: linear-gradient(to right, blue,#5BFE6B); */
+  /* color: #FFFFFF; */
+  background-image: url(./images/ghibli.jpg); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .App-logo {
