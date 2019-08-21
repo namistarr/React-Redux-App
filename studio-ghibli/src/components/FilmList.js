@@ -18,13 +18,16 @@ width: 100px;
 const PageTitle = styled.h1`
 color: #FFFFFF;
 `
-
+const Description = styled.p`
+color: #FFFFFF;
+`
 
 
 const FilmList = props => {
     return (
         <div className='film-container'>
-            <PageTitle>Studio Ghibli</PageTitle>
+            <PageTitle>Studio Ghibli React-Redux App</PageTitle>
+            <Description>Practicing Redux with Studio Ghibli API</Description>
             <Button className ='film-button' onClick={props.getFilms}>
                 {props.isLoading ? (
                     <Loader type='Oval' color='#FFFFFF' height={15} width={100} />
